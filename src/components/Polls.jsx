@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Poll from 'react-polls';
+import PropTypes from 'prop-types';
 
 const Polls = ({ polls }) => {
   const [pollData, updatePollData] = useState([]);
@@ -42,24 +43,51 @@ const Polls = ({ polls }) => {
     updatePollData(newPollData);
   };
 
+  // Renders the Polls
+  const renderPolls = () => pollData.map(
+    (poll) => (
+      <div key={poll.id}>
+        <div>
+          <Poll
+            question={poll.question}
+            answers={poll.answers}
+            onVote={(voteAnswer) => handleVote(voteAnswer, poll.id)}
+            customStyles={pollStyles}
+            noStorage
+          />
+        </div>
+      </div>
+    ),
+  );
+
   // Renders Poll which is from the package `react-polls`
   return (
-    pollData.map(
-      (poll) => (
-        <div key={poll.id}>
-          <div>
-            <Poll
-              question={poll.question}
-              answers={poll.answers}
-              onVote={(voteAnswer) => handleVote(voteAnswer, poll.id)}
-              customStyles={pollStyles}
-              noStorage
-            />
+    <div className="section">
+      <div className="container">
+        <div className="columns is-centered">
+          <div className="column is-half">
+            <div className="box">
+              <h1 className="title is-1 has-text-centered">Polls</h1>
+              <div className="polls">
+                {renderPolls()}
+              </div>
+            </div>
           </div>
         </div>
-      ),
-    )
+      </div>
+    </div>
   );
+};
+
+Polls.propTypes = {
+  polls: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    question: PropTypes.string.isRequired,
+    answers: PropTypes.arrayOf(PropTypes.shape({
+      option: PropTypes.string.isRequired,
+      votes: PropTypes.number.isRequired,
+    })).isRequired,
+  })).isRequired,
 };
 
 export default Polls;

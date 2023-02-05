@@ -31,32 +31,7 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">
-        <h1 className="name">Polls API</h1>
-      </header>
       <main className="main">
-        {/*
-          Here we are mapping the data as react-polls has different
-          variable naming when compared to our Polls API
-
-          To avoid this, we can use graphql aliases, which changes
-          our query to the following below.
-
-          This is done intentionally to explain this concept of aliasing
-          as many developers think that they have to change the backend
-          to fit accordingly, which actually we can just use alias.
-
-          {
-            polls {
-              question: question
-              answers: choices {
-                option: choiceText
-                vootes: votesCount
-              }
-            }
-          }
-
-         */}
         <Polls polls={data.polls.map(
           (poll) => ({
             id: poll.id,

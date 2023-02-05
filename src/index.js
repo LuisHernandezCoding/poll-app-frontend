@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bulma/css/bulma.css';
 import './index.css';
 
 import { ApolloProvider } from 'react-apollo';
