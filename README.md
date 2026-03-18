@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Project Name: Poll App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This is a simple poll app Frontend built with ReactJS. Its a simple frontend that consumes the Poll App API. It allows the users to check out polls.
+It also uses apollo client to consume the GraphQL API from the backend (witch is filled with dummy data), and it also uses react router to navigate between pages.
+The idea here is just to show data to the user, and not to allow the user to create, edit or delete anything.
 
-## Available Scripts
+### Extra Info
+- This is the frontend of the Poll App, the backend is built with Ruby on Rails and can be found [here](https://github.com/LuisHernandezCoding/poll-app-frontend)
 
-In the project directory, you can run:
+## Features
+- Simple UI
+- Single Page Application
+- Shows polls to the user
+- Allows the user to vote on a poll (the change is not saved, it's just a UI change)
+- Allows the user to see the results of a poll
+- Uses bulma for styling
+- Uses Babel to transpile ES6 to ES5
+- Uses react-polls to show the polls
 
-### `npm start`
+## Learning Outcomes
+- How to build an SPA with ReactJS
+- How to consume a GraphQL API instead of a REST API
+- How to use Apollo Client to consume a GraphQL API
+- How to use react-polls to show polls
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
+- ReactJS
+- Yarn
+- Apollo Client
+- Babel
+- Bulma
+- react-polls
+- GraphQL
+- Stylelint
+- Eslint
+- VSCode
+- Git
+- Github
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-### `npm test`
+### Prerequisites
+- NodeJS
+- Yarn
+- Git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setup
+- Clone the repository
+- Run `yarn install` to install the dependencies
+- Change port number in `src/index.js` if you want to connect to a different port (default is 5000)
+- Run `yarn start` to start the server
+- Open `http://localhost:3000` in your browser
 
-### `npm run build`
+## Authors
+👤 **Luis Hernandez**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub: [@LuisHernandezCoding](https://github.com/LuisHernandezCoding)
+- LinkedIn: [Luis Hernandez](https://www.linkedin.com/in/luis-hernandez-coding/)
